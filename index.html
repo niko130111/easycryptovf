@@ -1,491 +1,1027 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Découvrez Easy Crypto, votre solution clé en main pour investir dans les cryptomonnaies avec une stratégie automatisée, simple et sécurisée. Profitez de rendements élevés même en période de baisse."
+    />
+
     <title>Easy Crypto</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="icon"
+      href="images\favicon\favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+    />
+    <!-- Add SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <!-- Add SweetAlert2 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  </head>
+  <body>
     <header class="sticky-header">
-        <div class="container fade-in">
-            <img src="images/logo.png" alt="Logo Easy Crypto" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i> Accueil</a></li>
-                    <li><a href="#notre-solution"><i class="fas fa-cogs"></i> Notre solution</a></li>
-                    <li><a href="#nos-resultats"><i class="fas fa-chart-line"></i> Nos résultats</a></li>
-                    <li><a href="#pricing"><i class="fas fa-tags"></i> Tarifs</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-comment-alt"></i> Témoignages</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="about.html"><i class="fas fa-info-circle"></i> À Propos</a></li>
-                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="#parrainage"><i class="fas fa-user-friends"></i> Parrainage</a></li>
-                </ul>
-            </nav>
-            
+      <div class="container fade-in">
+        <a href="index.html"
+          ><img src="images/logo.png" alt="Logo Easy Crypto" class="logo"
+        /></a>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
         </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> Accueil</a>
+            </li>
+            <li>
+              <a href="#notre-solution"
+                ><i class="fas fa-cogs"></i> Notre solution</a
+              >
+            </li>
+            <li>
+              <a href="#nos-resultats"
+                ><i class="fas fa-chart-line"></i> Nos résultats</a
+              >
+            </li>
+            <li>
+              <a href="#pricing"><i class="fas fa-tags"></i> Tarifs</a>
+            </li>
+            <li>
+              <a href="#testimonials"
+                ><i class="fas fa-comment-alt"></i> Témoignages</a
+              >
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
+    <div id="cookie-banner">
+      <p>
+        Nous utilisons des cookies pour améliorer votre expérience. En
+        continuant à naviguer sur notre site, vous acceptez notre
+        <a href="/politique-de-confidentialite.html"
+          >politique de confidentialité</a
+        >.
+      </p>
+      <button id="accept-cookies">Accepter</button>
+    </div>
 
     <div id="home" class="banner" data-aos="fade-in">
-        <div class="banner-container">
-            <div class="banner-content" data-aos="fade-left">
-                <h1>Votre Solution Clé en<br> Main pour Investir <br> en Crypto</h1>
-                <p>Boostez vos profits même en période de baisse avec notre stratégie d’investissement automatisée.</p>
-                <a href="#notre-solution" class="cta-button">Commencez Maintenant</a>
-            </div>
-            <div class="banner-image" data-aos="fade-right">
-                <img src="images/banner.png" alt="Banner Image">
-            </div>
+      <div class="banner-container">
+        <div class="banner-content" data-aos="fade-left">
+          <h1>
+            Votre Solution Clé en<br />
+            Main pour Investir <br />
+            en Crypto
+          </h1>
+          <p>
+            Boostez vos profits même en période de baisse avec notre stratégie
+            d’investissement automatisée.
+          </p>
+          <a href="#pricing" class="cta-button">Commencez Maintenant</a>
         </div>
+        <div class="banner-image" data-aos="fade-right">
+          <img
+            src="images/couverture.png"
+            alt="Stratégie d'Investissement en Crypto"
+          />
+        </div>
+      </div>
     </div>
-    
+
     <section class="performance-banner">
-        <div class="container">
-            <div class="performance-banner-content">
-                <div class="metric">
-                    <span class="year">Performance 2022 :</span>
-                    <span class="value" id="performance-2022">45%</span>
-                </div>
-                <div class="metric">
-                    <span class="year">Performance 2023 :</span>
-                    <span class="value" id="performance-2023">151%</span>
-                </div>
-                <div class="metric">
-                    <span class="year">Performance 2024 :</span>
-                    <span class="value" id="performance-2024">98%</span>
-                </div>
-                <div class="metric">
-                    <span class="year">Performance Juin 2024 :</span>
-                    <span class="value" id="performance-june-2024">5%</span>
-                </div>
-            </div>
+      <div class="container">
+        <div class="performance-banner-content">
+          <div class="metric">
+            <span class="year">Performance 2022:</span>
+            <span class="value" id="performance-2022">45%</span>
+          </div>
+          <div class="metric">
+            <span class="year">Performance 2023:</span>
+            <span class="value" id="performance-2023">151%</span>
+          </div>
+          <div class="metric">
+            <span class="year">Performance 2024:</span>
+            <span class="value" id="performance-2024">98%</span>
+          </div>
+          <div class="metric">
+            <span class="year">Performance Juin 2024:</span>
+            <span class="value" id="performance-june-2024">5%</span>
+          </div>
         </div>
+      </div>
     </section>
-    
 
     <section id="notre-solution" class="presentation" data-aos="fade-right">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2 class="solution-title">Notre Solution</h2>
-                <p class="introduction-text">Découvrez comment notre solution révolutionne l'investissement en cryptomonnaies, en combinant simplicité, sécurité et performance pour vous offrir une expérience d'investissement sans stress et à haut rendement.</p>
-            </div>
-            <div class="cards">
-                <div class="card" data-aos="flip-left">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h4>Formation complète</h4>
-                    <p>Comprenez et maîtrisez notre stratégie d'investissement.</p>
-                </div>
-                <div class="card" data-aos="flip-left">
-                    <i class="fas fa-robot"></i>
-                    <h4>Investissement automatisé</h4>
-                    <p>Stratégie entièrement automatisée pour un investissement sans stress.</p>
-                </div>
-                <div class="card" data-aos="flip-left">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Simplicité</h4>
-                    <p>Mise en place sans effort et en quelques minutes.</p>
-                </div>
-                <div class="paired-container">
-                    <div class="card paired" data-aos="flip-left">
-                        <i class="fas fa-headset"></i>
-                        <h4>Support et analyse</h4>
-                        <p>Recevez une assistance continue et des rapports détaillés.</p>
-                    </div>
-                    <div class="card paired" data-aos="flip-left">
-                        <i class="fas fa-lock"></i>
-                        <h4>Sécurité</h4>
-                        <p>Vos fonds restent sécurisés et sous votre contrôle.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2 class="solution-title">Notre Solution</h2>
+          <p class="introduction-text">
+            Découvrez comment notre solution révolutionne l'investissement en
+            cryptomonnaies, en combinant simplicité, sécurité et performance
+            pour vous offrir une expérience d'investissement sans stress et à
+            haut rendement.
+          </p>
         </div>
+        <div class="cards">
+          <div class="card" data-aos="flip-left">
+            <i class="fas fa-graduation-cap"></i>
+            <h4>Formation complète</h4>
+            <p>Comprenez et maîtrisez notre stratégie d'investissement.</p>
+          </div>
+          <div class="card" data-aos="flip-left">
+            <i class="fas fa-robot"></i>
+            <h4>Investissement automatisé</h4>
+            <p>
+              Stratégie entièrement automatisée pour un investissement sans
+              stress.
+            </p>
+          </div>
+          <div class="card" data-aos="flip-left">
+            <i class="fas fa-check-circle"></i>
+            <h4>Simplicité</h4>
+            <p>Mise en place sans effort et en quelques minutes.</p>
+          </div>
+          <div class="paired-container">
+            <div class="card paired" data-aos="flip-left">
+              <i class="fas fa-headset"></i>
+              <h4>Support et analyse</h4>
+              <p>Recevez une assistance continue et des rapports détaillés.</p>
+            </div>
+            <div class="card paired" data-aos="flip-left">
+              <i class="fas fa-lock"></i>
+              <h4>Sécurité</h4>
+              <p>Vos fonds restent sécurisés et sous votre contrôle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="training" data-aos="fade-up">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2>Maîtrisez les Bases et Avancez avec Confiance</h2>
-                <p class="introduction-text">La clé d'un investissement réussi réside dans sa compréhension. C'est pourquoi nous proposons une formation complète. Notre programme vous permettra de :</p>
-            </div>
-            <div class="columns">
-                <div class="column" data-aos="fade-up">
-                    <img src="images/icon1.png" alt="Icon 1">
-                    <h4>Comprendre les bases de l'investissement et des marchés financiers.</h4>
-                </div>
-                <div class="column" data-aos="fade-up">
-                    <img src="images/icon2.png" alt="Icon 2">
-                    <h4>Apprenez notre stratégie d'investissement inspirée des plus grands fonds de gestion américains.</h4>
-                </div>
-                <div class="column" data-aos="fade-up">
-                    <img src="images/icon3.png" alt="Icon 3">
-                    <h4>Mettre en place et automatiser vos investissements en suivant des explications détaillées.</h4>
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2>Maîtrisez les Bases et Avancez avec Confiance</h2>
+          <p class="introduction-text">
+            La clé d'un investissement réussi réside dans sa compréhension.
+            C'est pourquoi nous proposons une formation complète. Notre
+            programme vous permettra de :
+          </p>
         </div>
+        <div class="columns">
+          <div class="column" data-aos="fade-up">
+            <img src="images/icon1.png" alt="Icon 1" />
+            <h4>
+              Comprendre les bases de l'investissement et des marchés
+              financiers.
+            </h4>
+          </div>
+          <div class="column" data-aos="fade-up">
+            <img src="images/icon2.png" alt="Icon 2" />
+            <h4>
+              Apprenez notre stratégie d'investissement inspirée des plus grands
+              fonds de gestion américains.
+            </h4>
+          </div>
+          <div class="column" data-aos="fade-up">
+            <img src="images/icon3.png" alt="Icon 3" />
+            <h4>
+              Mettre en place et automatiser vos investissements en suivant des
+              explications détaillées.
+            </h4>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="notre-strategie" class="presentation" data-aos="fade-right">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2 class="solution-title">Notre Stratégie</h2>
-                <p class="introduction-text">Optez pour une stratégie d'investissement efficace qui allie suivi de tendance, analyse en temps réel et gestion rigoureuse des fonds pour maximiser vos profits et minimiser les risques.</p>
-            </div>
-            <div class="strategy-content">
-                <div class="strategy-image" data-aos="fade-right">
-                    <img src="images/solution.png" alt="Image représentant notre stratégie">
-                </div>
-                <div class="strategy-text" data-aos="fade-left">
-                    <div class="feature-box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="feature-text">
-                            <h4>Suivi de Tendance</h4>
-                            <p>Nous identifions et exploitons les tendances du marché pour maximiser les gains, avec des positions pouvant durer de quelques heures à plusieurs mois.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-clock"></i>
-                        <div class="feature-text">
-                            <h4>Analyse en Temps Réel</h4>
-                            <p>Nos algorithmes surveillent en permanence les marchés pour détecter les meilleures opportunités d'investissement.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-arrow-down"></i>
-                        <div class="feature-text">
-                            <h4>Gains en Marché Baissier</h4>
-                            <p>Notre stratégie permet de réaliser des gains même lorsque le marché est en baisse, grâce à des techniques avancées.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-shield-alt"></i>
-                        <div class="feature-text">
-                            <h4>Gestion Rigoureuse des Fonds</h4>
-                            <p>Nous appliquons un money management strict pour protéger votre capital et minimiser les risques.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2 class="solution-title">Notre Stratégie</h2>
+          <p class="introduction-text">
+            Optez pour une stratégie d'investissement efficace qui allie suivi
+            de tendance, analyse en temps réel et gestion rigoureuse des fonds
+            pour maximiser vos profits et minimiser les risques.
+          </p>
         </div>
+        <div class="strategy-content">
+          <div class="strategy-image" data-aos="fade-right">
+            <img
+              src="images/strategie.png"
+              alt="Image représentant notre stratégie"
+            />
+          </div>
+          <div class="strategy-text" data-aos="fade-left">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Suivi de Tendance</h4>
+                <p>
+                  Nous identifions et exploitons les tendances du marché pour
+                  maximiser les gains, avec des positions pouvant durer de
+                  quelques heures à plusieurs mois.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Analyse en Temps Réel</h4>
+                <p>
+                  Nos algorithmes surveillent en permanence les marchés pour
+                  détecter les meilleures opportunités d'investissement.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Gains en Marché Baissier</h4>
+                <p>
+                  Notre stratégie permet de réaliser des gains même lorsque le
+                  marché est en baisse, grâce à des techniques avancées.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Gestion Rigoureuse des Fonds</h4>
+                <p>
+                  Nous appliquons un money management strict pour protéger votre
+                  capital et minimiser les risques.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="debuter-facilement" class="setup" data-aos="fade-up">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2 class="solution-title">Débutez Facilement</h2>
-                <p class="introduction-text">Suivez ces étapes simples pour débuter avec Easy Crypto. Notre concept, à la fois rapide et clair, est conçu pour être accessible à tous, que vous soyez un débutant ou un expert.</p>
-            </div>
-            <div class="timeline-horizontal">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-icon">
-                        <span class="icon-number">1</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Choisissez votre Offre</h4>
-                        <p>Choisissez l'offre d'abonnement qui correspond à vos besoins et objectifs.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-icon">
-                        <span class="icon-number">2</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Connectez votre Compte Exchange</h4>
-                        <p>Suivez notre guide pour connecter votre compte d'échange à notre plateforme de manière sécurisée.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-icon">
-                        <span class="icon-number">3</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Maîtrisez notre Stratégie</h4>
-                        <p>Consultez notre documentation et formation pour comprendre et maîtriser notre stratégie automatisée.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-icon">
-                        <span class="icon-number">4</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h4>Surveillez vos Performances</h4>
-                        <p>Gardez un œil sur l'évolution de votre capital et de vos rendements en temps réel grâce à notre tableau de bord.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2 class="solution-title">Débutez Facilement</h2>
+          <p class="introduction-text">
+            Suivez ces étapes simples pour débuter avec Easy Crypto. Notre
+            concept, à la fois rapide et clair, est conçu pour être accessible à
+            tous, que vous soyez un débutant ou un expert.
+          </p>
         </div>
+        <div class="timeline-horizontal">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-icon">
+              <span class="icon-number">1</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Choisissez votre Offre</h4>
+              <p>
+                Choisissez l'offre d'abonnement qui correspond à vos besoins et
+                objectifs.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-icon">
+              <span class="icon-number">2</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Connectez votre Compte Exchange</h4>
+              <p>
+                Suivez notre guide pour connecter votre compte d'échange à notre
+                plateforme de manière sécurisée.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-icon">
+              <span class="icon-number">3</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Maîtrisez notre Stratégie</h4>
+              <p>
+                Consultez notre documentation et formation pour comprendre et
+                maîtriser notre stratégie automatisée.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-icon">
+              <span class="icon-number">4</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Surveillez vos Performances</h4>
+              <p>
+                Gardez un œil sur l'évolution de votre capital et de vos
+                rendements en temps réel grâce à notre tableau de bord.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="support-analyse" class="presentation" data-aos="fade-right">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2 class="solution-title">Support et Analyse</h2>
-                <p class="introduction-text">Bénéficiez d'un service client dédié, disponible à tout moment pour répondre à vos questions, et recevez des analyses trimestrielles détaillées pour suivre la performance de votre portefeuille.</p>
-            </div>
-            <div class="support-analyse-content">
-                <div class="support-analyse-image" data-aos="fade-right">
-                    <img src="images/support-analyse.jpg" alt="Image représentant le support et l'analyse">
-                </div>
-                <div class="support-analyse-text" data-aos="fade-left">
-                    <div class="feature-box">
-                        <i class="fas fa-headset"></i>
-                        <div class="feature-text">
-                            <h4>Assistance Rapide</h4>
-                            <p>Bénéficiez d'un support technique réactif pour toutes vos questions.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="feature-text">
-                            <h4>Rapports Trimestriels</h4>
-                            <p>Recevez des analyses détaillées de la performance de votre portefeuille tous les trois mois.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-chart-pie"></i>
-                        <div class="feature-text">
-                            <h4>Analyses Régulières</h4>
-                            <p>Accédez à des analyses de marché régulières pour rester informé des tendances.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-newspaper"></i>
-                        <div class="feature-text">
-                            <h4>Actualités du Marché</h4>
-                            <p>Tenez-vous au courant des dernières actualités et opportunités du marché des cryptomonnaies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2 class="solution-title">Support et Analyse</h2>
+          <p class="introduction-text">
+            Bénéficiez d'un service client dédié, disponible à tout moment pour
+            répondre à vos questions, et recevez des analyses trimestrielles
+            détaillées pour suivre la performance de votre portefeuille.
+          </p>
         </div>
+        <div class="support-analyse-content">
+          <div class="support-analyse-image" data-aos="fade-right">
+            <img
+              src="images/support-analyse.jpg"
+              alt="Image représentant le support et l'analyse"
+            />
+          </div>
+          <div class="support-analyse-text" data-aos="fade-left">
+            <div class="feature-box" id="assistance-rapide">
+              <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Assistance Rapide</h4>
+                <p>
+                  Bénéficiez d'un support technique réactif pour toutes vos
+                  questions.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Rapports Trimestriels</h4>
+                <p>
+                  Recevez des analyses détaillées de la performance de votre
+                  portefeuille tous les trois mois.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Analyses Régulières</h4>
+                <p>
+                  Accédez à des analyses de marché régulières pour rester
+                  informé des tendances.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Actualités du Marché</h4>
+                <p>
+                  Tenez-vous au courant des dernières actualités et opportunités
+                  du marché des cryptomonnaies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="securite-totale" class="presentation" data-aos="fade-up">
-        <div class="container">
-            <div class="introduction" data-aos="fade-in">
-                <h2 class="solution-title">Sécurité Totale</h2>
-                <p class="introduction-text">Assurez la sécurité de vos cryptomonnaies avec notre protection avancée : vos fonds restent sous votre contrôle, sécurisés et transparents à chaque étape.</p>
-            </div>
-            <div class="securite-totale-content">
-                <div class="securite-totale-text" data-aos="fade-left">
-                    <div class="feature-box">
-                        <i class="fas fa-lock"></i>
-                        <div class="feature-text">
-                            <h4>Contrôle Total</h4>
-                            <p>Vos cryptomonnaies restent sur vos comptes, nous n'avons jamais accès à vos fonds.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-user-shield"></i>
-                        <div class="feature-text">
-                            <h4>Protection des Données</h4>
-                            <p>Nous utilisons des protocoles de sécurité avancés pour protéger vos informations personnelles.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-shield-alt"></i>
-                        <div class="feature-text">
-                            <h4>Transactions Sécurisées</h4>
-                            <p>Toutes les opérations de trading se font de manière sécurisée, sans possibilité de transférer ou de retirer vos liquidités.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-search-dollar"></i>
-                        <div class="feature-text">
-                            <h4>Transparence</h4>
-                            <p>Nous expliquons chaque aspect de notre stratégie pour que vous compreniez parfaitement comment votre argent travaille pour vous.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="securite-totale-image" data-aos="fade-right">
-                    <img src="images/securite.jpg" alt="Image de sécurité">
-                </div>
-            </div>
+      <div class="container">
+        <div class="introduction" data-aos="fade-in">
+          <h2 class="solution-title">Sécurité Totale</h2>
+          <p class="introduction-text">
+            Assurez la sécurité de vos cryptomonnaies avec notre protection
+            avancée : vos fonds restent sous votre contrôle, sécurisés et
+            transparents à chaque étape.
+          </p>
         </div>
+        <div class="securite-totale-content">
+          <div class="securite-totale-text" data-aos="fade-left">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Contrôle Total</h4>
+                <p>
+                  Vos cryptomonnaies restent sur vos comptes, nous n'avons
+                  jamais accès à vos fonds.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Protection des Données</h4>
+                <p>
+                  Nous utilisons des protocoles de sécurité avancés pour
+                  protéger vos informations personnelles.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Transactions Sécurisées</h4>
+                <p>
+                  Toutes les opérations de trading se font de manière sécurisée,
+                  sans possibilité de transférer ou de retirer vos liquidités.
+                </p>
+              </div>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="fas fa-search-dollar"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Transparence</h4>
+                <p>
+                  Nous expliquons chaque aspect de notre stratégie pour que vous
+                  compreniez parfaitement comment votre argent travaille pour
+                  vous.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="securite-totale-image" data-aos="fade-right">
+            <img src="images/securite.jpg" alt="Image de sécurité" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="nos-resultats" class="presentation" data-aos="fade-up">
-        <div class="container">
-            <div class="introduction">
-                <h2>Découvrez Nos Performances Exceptionnelles</h2>
-                <p class="introduction-text">Découvrez nos performances exceptionnelles à travers ce graphique. Voyez comment Easy Crypto surpasse le marché avec des rendements élevés et une croissance solide, même lorsque le marché baisse.</p>
-            </div>
-            <div class="solution-content">
-                <div class="performance-kpis">
-                    <div class="kpi">
-                        <h4 class="kpi-title">Rendement Annuel Moyen</h4>
-                        <p class="kpi-value">98.1%</p>
-                    </div>
-                    <div class="kpi">
-                        <h4 class="kpi-title">Rendement Mensuel Moyen</h4>
-                        <p class="kpi-value">7.2%</p>
-                    </div>
-                    <div class="kpi">
-                        <h4 class="kpi-title">Performance Cumulative</h4>
-                        <p class="kpi-value">685.15%</p>
-                    </div>
-                    <div class="kpi">
-                        <h4 class="kpi-title">Maximum Drawdown</h4>
-                        <p class="kpi-value">20%</p>
-                    </div>
-                </div>
-                <div class="graphs">
-                    <h4 class="graph-title">Comparaison des Performances</h4>
-                    <canvas id="performanceComparisonChart"></canvas>
-                    <h4 class="graph-title">Performances Annuelles</h4>
-                    <canvas id="annualPerformanceChart"></canvas>
-                </div>
-            </div>
-            <div class="cta">
-                <p>Vous souhaitez en savoir plus ? Recevez notre rapport trimestriel.</p>
-                <form action="#" method="post" class="cta-form">
-                    <input type="email" name="email" placeholder="Votre Email" required>
-                    <button type="submit" class="cta-button">En savoir plus</button>
-                </form>
-            </div>
+      <div class="container">
+        <div class="introduction">
+          <h2>Découvrez Nos Performances Exceptionnelles</h2>
+          <p class="introduction-text">
+            Découvrez nos performances exceptionnelles à travers ce graphique.
+            Voyez comment Easy Crypto surpasse le marché avec des rendements
+            élevés et une croissance solide, même lorsque le marché baisse.
+          </p>
         </div>
+        <div class="solution-content">
+          <div class="performance-kpis">
+            <div class="kpi">
+              <h4 class="kpi-title">Rendement Annuel Moyen</h4>
+              <p class="kpi-value">98.1%</p>
+            </div>
+            <div class="kpi">
+              <h4 class="kpi-title">Rendement Mensuel Moyen</h4>
+              <p class="kpi-value">7.2%</p>
+            </div>
+            <div class="kpi">
+              <h4 class="kpi-title">Performance Cumulative</h4>
+              <p class="kpi-value">685.15%</p>
+            </div>
+            <div class="kpi">
+              <h4 class="kpi-title">Maximum Drawdown</h4>
+              <p class="kpi-value">20%</p>
+            </div>
+          </div>
+          <div class="graphs">
+            <h4 class="graph-title">Comparaison des Performances</h4>
+            <canvas id="performanceComparisonChart"></canvas>
+            <h4 class="graph-title">Performances Annuelles</h4>
+            <canvas id="annualPerformanceChart"></canvas>
+          </div>
+        </div>
+        <div class="cta">
+          <p>
+            Vous souhaitez en savoir plus ? Recevez notre rapport de performance
+          </p>
+          <div class="sib-form" style="text-align: center">
+            <div
+              id="sib-form-container"
+              class="sib-form-container"
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div
+                id="error-message"
+                class="sib-form-message-panel"
+                style="
+                  font-size: 16px;
+                  text-align: left;
+                  font-family: 'Helvetica', sans-serif;
+                  color: #661d1d;
+                  background-color: #ffeded;
+                  border-radius: 10px;
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                  border-color: #ff4949;
+                  max-width: 540px;
+                "
+              >
+                <div
+                  class="sib-form-message-panel__text sib-form-message-panel__text--center"
+                >
+                  <svg
+                    viewBox="0 0 512 512"
+                    class="sib-icon sib-notification__icon"
+                  >
+                    <path
+                      d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"
+                    />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">
+                    Nous n&#039;avons pas pu confirmer votre inscription.
+                  </span>
+                </div>
+              </div>
+              <div></div>
+              <div
+                id="success-message"
+                class="sib-form-message-panel"
+                style="
+                  font-size: 16px;
+                  text-align: left;
+                  font-family: 'Helvetica', sans-serif;
+                  color: #085229;
+                  background-color: #e7faf0;
+                  border-radius: 3px;
+                  border-color: #13ce66;
+                  max-width: 540px;
+                "
+              >
+                <div
+                  class="sib-form-message-panel__text sib-form-message-panel__text--center"
+                >
+                  <svg
+                    viewBox="0 0 512 512"
+                    class="sib-icon sib-notification__icon"
+                  >
+                    <path
+                      d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"
+                    />
+                  </svg>
+                  <span class="sib-form-message-panel__inner-text">
+                    Votre inscription est confirmée.
+                  </span>
+                </div>
+              </div>
+              <div></div>
+              <div
+                id="sib-container"
+                class="sib-container--large sib-container--vertical"
+                style="
+                  text-align: center;
+                  background-color: #ffffff;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  max-width: 540px;
+                  border-radius: 10px;
+                "
+              >
+                <form
+                  id="sib-form"
+                  method="POST"
+                  action="https://0b595a22.sibforms.com/serve/MUIFADgvuU_U6JUAcjdUZlAxzYA1G0mgbX-46H8vSEuumu-ejEM1sEPqy-QGjE_chgVlYZctkW1pzdFO1Ez4vsv_23ypZkmE7kKlkrw3ApdKzOtK20lBtsDubMpN2azNytE7TBM7rVVIPAmNgu51eAXIiYrzTL0X1qyepp2uCtqHrZyXP7mtzdSITwEI8dScwN8MBUubaKCuXA89"
+                  data-type="subscription"
+                >
+                  <div style="padding: 8px 0">
+                    <div class="sib-input sib-form-block">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row">
+                          <div style="display: flex">
+                            <div
+                              class="entry__field"
+                              style="width: -webkit-fill-available"
+                            >
+                              <input
+                                class="input"
+                                type="email"
+                                id="EMAIL"
+                                name="EMAIL"
+                                autocomplete="off"
+                                placeholder="EMAIL"
+                                data-required="true"
+                                required
+                              />
+                            </div>
+
+                            <div style="padding: 8px 0">
+                              <div
+                                class="sib-form-block"
+                                style="text-align: left"
+                              >
+                                <button
+                                  class="sib-form-block__button-with-loader cta-button"
+                                  form="sib-form"
+                                  type="submit"
+                                >
+                                  <svg
+                                    class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                                    viewBox="0 0 512 512"
+                                  >
+                                    <path
+                                      d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"
+                                    />
+                                  </svg>
+                                  S&#039;INSCRIRE
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    name="email_address_check"
+                    value=""
+                    class="input--hidden"
+                  />
+                  <input type="hidden" name="locale" value="fr" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="testimonials" class="testimonials" data-aos="fade-up">
-        <div class="container">
-            <h2 data-aos="fade-in">Ce que disent nos clients</h2>
-            <div class="testimonial-row">
-                <div class="testimonial" data-aos="fade-up">
-                    <img src="images/jean-dupont.jpg" alt="Jean Dupont">
-                    <h3>Jean Dupont</h3>
-                    <p>"Easy Crypto a transformé ma manière d'investir. Grâce à leur stratégie automatisée, j'ai pu obtenir des rendements constants sans stress. Je recommande vivement !"</p>
-                </div>
-                <div class="testimonial" data-aos="fade-up">
-                    <img src="images/marie-martin.jpg" alt="Marie Martin">
-                    <h3>Marie Martin</h3>
-                    <p>"La formation fournie par Easy Crypto est exceptionnelle. J'ai appris les bases de l'investissement et maintenant je me sens en confiance pour gérer mes investissements. Une équipe très professionnelle et réactive."</p>
-                </div>
-                <div class="testimonial" data-aos="fade-up">
-                    <img src="images/paul-durand.jpg" alt="Paul Durand">
-                    <h3>Paul Durand</h3>
-                    <p>"Les performances de Easy Crypto sont impressionnantes. Même lorsque le marché était en baisse, j'ai continué à voir des gains grâce à leur stratégie optimisée. Très satisfait de leur service."</p>
-                </div>
-            </div>
-            <div class="cta" data-aos="fade-in">
-                <p>Rejoignez notre communauté d'investisseurs satisfaits et découvrez les avantages d'une stratégie d'investissement automatisée et rentable.</p>
-                <a href="#start" class="cta-button">Commencez Maintenant</a>
-            </div>
+      <div class="container">
+        <h2 data-aos="fade-in">Ce que disent nos clients</h2>
+        <div class="testimonial-row">
+          <div class="testimonial" data-aos="fade-up">
+            <video
+              width="240"
+              height="240"
+              controls
+              poster="images/testimonial1-poster.jpg"
+            >
+              <source src="videos/testimonial1.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+            <h3>Jean Dupont</h3>
+            <p>
+              "Easy Crypto a transformé ma manière d'investir. Grâce à leur
+              stratégie automatisée, j'ai pu obtenir des rendements constants
+              sans stress. Je recommande vivement !"
+            </p>
+          </div>
+          <div class="testimonial" data-aos="fade-up">
+            <video
+              width="240"
+              height="240"
+              controls
+              poster="images/testimonial2-poster.jpg"
+            >
+              <source src="videos/testimonial2.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+            <h3>Marie Martin</h3>
+            <p>
+              "La formation fournie par Easy Crypto est exceptionnelle. J'ai
+              appris les bases de l'investissement et maintenant je me sens en
+              confiance pour gérer mes investissements. Une équipe très
+              professionnelle et réactive."
+            </p>
+          </div>
+          <div class="testimonial" data-aos="fade-up">
+            <video
+              width="240"
+              height="240"
+              controls
+              poster="images/testimonial3-poster.jpg"
+            >
+              <source src="videos/testimonial3.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+            <h3>Jean Dupont</h3>
+            <p>
+              "Easy Crypto a transformé ma manière d'investir. Grâce à leur
+              stratégie automatisée, j'ai pu obtenir des rendements constants
+              sans stress. Je recommande vivement !"
+            </p>
+          </div>
+          <div class="testimonial" data-aos="fade-up">
+            <video
+              width="240"
+              height="240"
+              controls
+              poster="images/testimonial4-poster.jpg"
+            >
+              <source src="videos/testimonial4.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+            <h3>Marie Martin</h3>
+            <p>
+              "La formation fournie par Easy Crypto est exceptionnelle. J'ai
+              appris les bases de l'investissement et maintenant je me sens en
+              confiance pour gérer mes investissements. Une équipe très
+              professionnelle et réactive."
+            </p>
+          </div>
+          <div class="testimonial" data-aos="fade-up">
+            <video
+              width="240"
+              height="240"
+              controls
+              poster="images/testimonial5-poster.jpg"
+            >
+              <source src="videos/testimonial5.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéo.
+            </video>
+            <h3>Paul Durand</h3>
+            <p>
+              "Les performances de Easy Crypto sont impressionnantes. Même
+              lorsque le marché était en baisse, j'ai continué à voir des gains
+              grâce à leur stratégie optimisée. Très satisfait de leur service."
+            </p>
+          </div>
         </div>
+
+        <div class="cta" data-aos="fade-in">
+          <p>
+            Rejoignez notre communauté d'investisseurs satisfaits et découvrez
+            les avantages d'une stratégie d'investissement automatisée et
+            rentable.
+          </p>
+          <a href="#pricing" class="cta-button">Commencez Maintenant</a>
+        </div>
+      </div>
     </section>
 
     <section id="pricing" class="presentation" data-aos="fade-right">
-        <div class="container">
-            <h2 data-aos="fade-in">Découvrez Nos Offres</h2>
-            <div class="pricing-table">
-                <div class="pricing-option" data-aos="zoom-in">
-                    <h4>Abonnement Annuel à 25€ par Mois</h4>
-                    <h5 class="price">25€ par mois (300€ par an) + 100€ frais d’inscription TTC</h5>
-                    <ul>
-                        <li><h5>📚 Formation sur l’investissement et la stratégie utilisée</h5></li>
-                        <li><h5>🤖 Automatisation jusqu’à 5000€ de capital</h5></li>
-                        <li><h5>📈 Rapport trimestriel de performance</h5></li>
-                        <li><h5>👩‍💼 Assistance personnalisée sous 12h</h5></li>
-                        <li><h5>📧 Newsletter</h5></li>
-                    </ul>
-                    <a href="#" class="cta-button">Adoptez l'Offre 1 Maintenant</a>
-                </div>
-                <div class="pricing-option" data-aos="zoom-in">
-                    <h4>Abonnement Annuel à 50€ par Mois</h4>
-                    <h5 class="price">50€ par mois (600€ par an) + 100€ frais d’inscription TTC</h5>
-                    <ul>
-                        <li><h5>📚 Formation sur l’investissement et la stratégie utilisée</h5></li>
-                        <li><h5>🤖 Automatisation jusqu’à 10 000€ de capital</h5></li>
-                        <li><h5>📈 Rapport trimestriel de performance</h5></li>
-                        <li><h5>👩‍💼 Assistance personnalisée sous 12h</h5></li>
-                        <li><h5>📧 Newsletter</h5></li>
-                    </ul>
-                    <a href="#" class="cta-button">Choisissez l'Offre 2 Aujourd'hui</a>
-                </div>
-            </div>
+      <div class="container">
+        <h2 data-aos="fade-in">Découvrez Nos Offres</h2>
+        <div class="pricing-table">
+          <div class="pricing-option" data-aos="zoom-in">
+            <h4>Abonnement Annuel à 25€ par Mois</h4>
+            <h5 class="price">
+              25€ par mois (300€ par an) + 100€ frais d’inscription TTC
+            </h5>
+            <ul>
+              <li>
+                <h5>
+                  📚 Formation sur l’investissement et la stratégie utilisée
+                </h5>
+              </li>
+              <li><h5>🤖 Automatisation jusqu’à 5000€ de capital</h5></li>
+              <li><h5>📈 Rapport trimestriel de performance</h5></li>
+              <li><h5>👩‍💼 Assistance personnalisée sous 12h</h5></li>
+              <li><h5>📧 Newsletter</h5></li>
+              <li>
+                <h5>💬 Accès au discord communautaire</h5>
+              </li>
+            </ul>
+            <a href="#" class="cta-button">Adoptez l'Offre 1</a>
+          </div>
+          <div class="pricing-option" data-aos="zoom-in">
+            <h4>Abonnement Annuel à 50€ par Mois</h4>
+            <h5 class="price">
+              50€ par mois (600€ par an) + 100€ frais d’inscription TTC
+            </h5>
+            <ul>
+              <li>
+                <h5>
+                  📚 Formation sur l’investissement et la stratégie utilisée
+                </h5>
+              </li>
+              <li><h5>🤖 Automatisation jusqu’à 10 000€ de capital</h5></li>
+              <li><h5>📈 Rapport trimestriel de performance</h5></li>
+              <li><h5>👩‍💼 Assistance personnalisée sous 12h</h5></li>
+              <li><h5>📧 Newsletter</h5></li>
+              <li>
+                <h5>💬 Accès au discord communautaire</h5>
+              </li>
+            </ul>
+            <a href="#" class="cta-button">Choisissez l'Offre 2</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="faq-tarifs" class="faq" data-aos="fade-up">
-        <div class="container">
-            <h2>À savoir sur nos offres</h2>
-            <div class="faq-item" data-aos="fade-up">
-                <h3>Comment bien choisir le montant d’investissement ? <span class="toggle-icon">➕</span></h3>
-                <p>Choisissez un montant que vous êtes prêt à risquer et qui correspond à vos objectifs financiers. Notre équipe peut vous aider à déterminer le montant optimal en fonction de votre profil d'investisseur.</p>
-            </div>
-            <div class="faq-item" data-aos="fade-up">
-                <h3>Que se passe-t-il si je dépasse la somme prévue par mon abonnement ? <span class="toggle-icon">➕</span></h3>
-                <p>Si vous dépassez la somme prévue par votre abonnement, le montant excédentaire ne sera pas investi. Pour continuer à bénéficier de nos services sur l'ensemble de votre capital, nous vous proposerons de passer à un niveau d'abonnement supérieur.</p>
-            </div>
-            <div class="faq-item" data-aos="fade-up">
-                <h3>À quoi correspondent les frais d’abonnement ? <span class="toggle-icon">➕</span></h3>
-                <p>Les frais d'abonnement couvrent l'accès à notre formation, l'utilisation de notre stratégie d'investissement automatisée, les rapports trimestriels de performance et l'assistance personnalisée.</p>
-            </div>
+      <div class="container">
+        <h2>À savoir sur nos offres</h2>
+        <div class="faq-item" data-aos="fade-up">
+          <h3>
+            Comment bien choisir le montant d’investissement ?
+            <span class="toggle-icon">➕</span>
+          </h3>
+          <p>
+            Choisissez un montant que vous êtes prêt à risquer et qui correspond
+            à vos objectifs financiers. Notre équipe peut vous aider à
+            déterminer le montant optimal en fonction de votre profil
+            d'investisseur.
+          </p>
         </div>
+        <div class="faq-item" data-aos="fade-up">
+          <h3>
+            Que se passe-t-il si je dépasse la somme prévue par mon abonnement ?
+            <span class="toggle-icon">➕</span>
+          </h3>
+          <p>
+            Si vous dépassez la somme prévue par votre abonnement, le montant
+            excédentaire ne sera pas investi. Pour continuer à bénéficier de nos
+            services sur l'ensemble de votre capital, nous vous proposerons de
+            passer à un niveau d'abonnement supérieur.
+          </p>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <h3>
+            À quoi correspondent les frais d’abonnement ?
+            <span class="toggle-icon">➕</span>
+          </h3>
+          <p>
+            Les frais d'abonnement couvrent l'accès à notre formation,
+            l'utilisation de notre stratégie d'investissement automatisée, les
+            rapports trimestriels de performance et l'assistance personnalisée.
+          </p>
+        </div>
+      </div>
     </section>
-    
+
     <section id="contact" class="contact" data-aos="fade-up">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <p>Vous avez d'autres questions ? N'hésitez pas à nous contacter pour plus d'informations.</p>
-            <br>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Votre Nom" required>
-                <input type="email" name="email" placeholder="Votre Email" required>
-                <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
-                <button type="submit" class="cta-button">Contactez-nous</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2>Contactez-nous</h2>
+        <p>
+          Vous avez d'autres questions ? N'hésitez pas à nous contacter pour
+          plus d'informations.
+        </p>
+        <br />
+        <form class="contact-form" id="contact-form">
+          <input type="text" name="name" placeholder="Votre Nom" required />
+          <input type="email" name="email" placeholder="Votre Email" required />
+          <textarea
+            name="message"
+            placeholder="Votre Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="cta-button">Contactez-nous</button>
+        </form>
+      </div>
     </section>
-    
+
     <footer data-aos="fade-in">
-        <div class="container">
-            <img src="images/logo.png" alt="Logo Easy Crypto" class="logo-footer">
-            <nav>
-                <ul>
-                    <li><a href="#cookies">Cookies</a></li>
-                    <li><a href="#cgu">CGU</a></li>
-                    <li><a href="#privacy-policy">Politique de confidentialité</a></li>
-                    <li><a href="#legal-notice">Mentions légales</a></li>
-                    <li><a href="#security">Sécurité</a></li>
-                </ul>
-            </nav>
-            <div class="footer-text">
-                <p>Copyright © 2017-2024 Easy Crypto - Tous droits réservés.</p>
-                <p>© Easycrypto. Les informations contenues sur Easycrypto sont à vocation pédagogique et fournies à titre d'information uniquement. Elles ne doivent pas être considérées comme une invitation ou un encouragement à acheter ou vendre des cryptomonnaies spécifiques. Tout commentaire relève de l'expérience personnelle d'Easycrypto et ne doit pas être considéré comme une recommandation personnalisée.</p>
-                <p>Les informations fournies par Easycrypto ne doivent pas être l'unique source pour prendre une décision d'investissement. Veillez à contacter un conseiller financier ou un professionnel de la finance avant de prendre toute décision d'investissement. Easycrypto n'est en aucun cas responsable de vos pertes. L’investisseur est seul responsable de l’utilisation de l’information fournie, sans recours contre Easycrypto, qui n’est pas responsable en cas d’erreur, d'omission, d’investissement inopportun ou d’évolution du marché défavorable aux opérations réalisées.</p>
-                <p>Le placement en cryptomonnaies est risqué. Vous pouvez subir des pertes. Les performances passées ne préjugent pas des performances futures, elles ne sont pas constantes dans le temps et ne constituent en aucun cas une garantie future de performance ou de capital. Les références à des classements et récompenses passés ne préjugent pas des classements ou des récompenses à venir.</p>
-                <p>Les outils et les informations fournies par Easycrypto ne sont pas des conseils juridiques, fiscaux ou en investissement. Les informations dispensées sont de nature éducative et générale et ne sont pas des conseils en investissement, au sens des articles L. 321-1 et D. 321-1 du Code Monétaire et Financier.</p>
-            </div>
+      <div class="container">
+        <img src="images/logo.png" alt="Logo Easy Crypto" class="logo-footer" />
+        <nav>
+          <ul>
+            <li><a href="cgv.html">CGV</a></li>
+            <li>
+              <a href="politique-de-confidentialite.html"
+                >Politique de confidentialité</a
+              >
+            </li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li>
+              <a href="about.html">A propos</a>
+            </li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </nav>
+        <div class="footer-text">
+          <p>Copyright © 2024 Easy Crypto - Tous droits réservés.</p>
+          <p>
+            © Easycrypto. Les informations contenues sur Easycrypto sont à
+            vocation pédagogique et fournies à titre d'information uniquement.
+            Elles ne doivent pas être considérées comme une invitation ou un
+            encouragement à acheter ou vendre des cryptomonnaies spécifiques.
+            Tout commentaire relève de l'expérience personnelle d'Easycrypto et
+            ne doit pas être considéré comme une recommandation personnalisée.
+          </p>
+          <p>
+            Les informations fournies par Easycrypto ne doivent pas être
+            l'unique source pour prendre une décision d'investissement. Veillez
+            à contacter un conseiller financier ou un professionnel de la
+            finance avant de prendre toute décision d'investissement. Easycrypto
+            n'est en aucun cas responsable de vos pertes. L’investisseur est
+            seul responsable de l’utilisation de l’information fournie, sans
+            recours contre Easycrypto, qui n’est pas responsable en cas
+            d’erreur, d'omission, d’investissement inopportun ou d’évolution du
+            marché défavorable aux opérations réalisées.
+          </p>
+          <p>
+            Le placement en cryptomonnaies est risqué. Vous pouvez subir des
+            pertes. Les performances passées ne préjugent pas des performances
+            futures, elles ne sont pas constantes dans le temps et ne
+            constituent en aucun cas une garantie future de performance ou de
+            capital. Les références à des classements et récompenses passés ne
+            préjugent pas des classements ou des récompenses à venir.
+          </p>
+          <p>
+            Les outils et les informations fournies par Easycrypto ne sont pas
+            des conseils juridiques, fiscaux ou en investissement. Les
+            informations dispensées sont de nature éducative et générale et ne
+            sont pas des conseils en investissement, au sens des articles L.
+            321-1 et D. 321-1 du Code Monétaire et Financier.
+          </p>
         </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1200, // durée de l'animation en ms
-        });
+      AOS.init({
+        duration: 1200, // durée de l'animation en ms
+      });
     </script>
     <script>
-        $(document).ready(function() {
-            $('nav ul li a').on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
-                }
-            });
+      $(document).ready(function () {
+        $("nav ul li a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
         });
+      });
     </script>
+    <script>
+      document.getElementById("sib-form").onsubmit = function (event) {
+        event.preventDefault(); // Prevent default form submission
+        // Example: Show success message without leaving the page
+        document.getElementById("success-message").style.display = "block";
+      };
+    </script>
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = "Veuillez choisir un code pays";
+      window.LOCALE = "fr";
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
+        "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+
+      window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. ";
+
+      window.GENERIC_INVALID_MESSAGE =
+        "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+
+      window.translation = {
+        common: {
+          selectedList: "{quantity} liste sélectionnée",
+          selectedLists: "{quantity} listes sélectionnées",
+        },
+      };
+
+      var AUTOHIDE = Boolean(0);
+    </script>
+
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>

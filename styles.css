@@ -8,9 +8,9 @@
     --text-color: #333333; /* Gris Foncé */
     --warm-neutral: #FFD700; /* Beige Or */
     --highlight-color: #F2e3d6; /* Beige */
-    --font-titles: 'Lato', sans-serif;
-    --font-subtitles: 'Lato', sans-serif;
-    --font-body: 'Roboto', sans-serif;
+    --font-titles: 'FormaDJbanner', sans-serif;
+    --font-subtitles: 'FormaDJBanner', sans-serif;
+    --font-body: 'Helvetica', sans-serif;
     --default-font-size: 16px;
     --large-font-size: 2em; /* Exemple de taille de police grande */
     --medium-font-size: 1.5em; /* Exemple de taille de police moyenne */
@@ -29,6 +29,18 @@ body {
     font-size: var(--body-font-size); /* Taille de police par défaut */
     line-height: var(--body-line-height); /* Hauteur de ligne par défaut */
 }
+
+@media screen and (max-width: 768px) {
+/* Fix the overflow issues */
+    .container{
+        padding: 0 !important;
+        width: 90%;
+    }
+
+    body, html {
+        overflow-x: hidden;
+      }
+    }
 
 /* Styles pour h1, h2, h3 */
 h1, h2, h3 {
@@ -110,62 +122,135 @@ a:hover {
 section {
     padding: 40px 0; /* Padding vertical pour les sections */
 }
-
-/* En-tête */
 header {
-    background-color: var(--primary-color); /* Couleur de fond de l'en-tête */
-    padding: 0.5em 0; /* Padding vertical */
-    position: sticky; /* Fixe l'en-tête en haut de la page */
-    top: 0; /* Position en haut */
-    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre de l'en-tête */
+    background-color: var(--primary-color);
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
-    display: flex; /* Utilise Flexbox pour l'alignement interne */
-    align-items: center; /* Aligne verticalement les éléments */
-    justify-content: space-between; /* Espace entre les éléments */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header .logo {
-    height: 100px; /* Hauteur du logo */
-    transition: transform 0.3s; /* Transition pour l'animation du logo */
+    height: 100px;
+    transition: transform 0.3s;
 }
 
 header .logo:hover {
-    transform: scale(1.1); /* Effet de survol pour le logo */
+    transform: scale(1.1);
 }
 
 header nav ul {
-    list-style-type: none; /* Supprime les puces de la liste */
-    display: flex; /* Utilise Flexbox pour l'alignement */
-    justify-content: space-between; /* Espace entre les éléments */
-    padding: 5px 10px; /* Padding interne */
-    gap: 1px; /* Ajoute un espace entre les éléments */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    gap: 1px;
 }
 
 header nav ul li {
-    margin: 0 0.7em; /* Marges des éléments de la liste */
+    margin: 0 0.7em;
 }
 
 header nav ul li a {
-    display: flex; /* Utilise Flexbox pour l'alignement */
-    align-items: center; /* Centre verticalement les liens */
-    text-decoration: none; /* Supprime la décoration des liens */
-    font-family: var(--font-body); /* Utilise la police Roboto */
-    font-weight: normal; /* Enlever le gras */
-    font-size: 1em; /* Taille de police des liens */
-    color: var(--light-color); /* Couleur des liens */
-    transition: color 0.3s; /* Transition de couleur au survol */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: normal;
+    font-size: 1em;
+    color: var(--light-color);
+    transition: color 0.3s;
 }
 
 header nav ul li a i {
-    margin-right: 5px; /* Espace entre l'icône et le texte */
-    font-size: 1.2em; /* Taille de l'icône */
+    margin-right: 5px;
+    font-size: 0.8em;
 }
 
 header nav ul li a:hover {
-    color: var(--secondary-color); /* Couleur des liens au survol */
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 40px;
+    color: #FFF;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: -5%;
+        background-color: var(--primary-color);
+        z-index: 999;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-list li a {
+        margin: 0;
+        margin-right: 0;
+        text-align: right;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list.active {
+
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* cookies */
+
+#cookie-banner {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+        bottom: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: #f4f4f4;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cookie-banner a {
+    color: #007bff; text-decoration: none
+}
+
+#cookie-banner #accept-cookies {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -248,6 +333,7 @@ header nav ul li a:hover {
 
 .cta-button:hover {
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%); /* Dégradé de fond au survol */
+    color: #FFFFFF; /* Couleur de texte */
     transform: scale(1.05); /* Effet d'agrandissement au survol */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre au survol */
     border-color: var(--warm-neutral); /* Couleur de bordure */
@@ -274,6 +360,52 @@ header nav ul li a:hover {
 .banner-image img:hover {
     transform: scale(1.05); /* Effet d'agrandissement au survol */
 }
+
+@media screen and (max-width: 768px) {
+    .banner-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        text-align: center; /* Center text for all elements */
+    }
+
+    .banner-content {
+        width: 100%; /* Full width for better alignment */
+        max-width: 90%;
+        padding-right: 0; /* Remove right padding */
+        transform: translateY(0); /* Remove vertical shift */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center text for content */
+        margin-bottom: 20px; /* Space between content and image */
+    }
+
+    .banner-content h1, 
+    .banner-content p {
+        text-align: center; /* Center-align text */
+    }
+
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        display: inline-block;
+        margin-top: 20px; /* Add margin above the button */
+    }
+
+    .banner-image {
+        width: 100%; /* Full width for the image */
+        max-width: 90%;
+        text-align: center; /* Center-align image */
+        margin: 0 auto; /* Center image */
+    }
+
+    .banner-image img {
+        width: 100%; /* Image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 
 
 
@@ -317,11 +449,46 @@ header nav ul li a:hover {
 
 .metric .year,
 .metric .value {
-    font-size: 1em; /* Taille de police */
+    font-size: 1.2em; /* Taille de police */
     margin-left: 0.5em; /* Espace à gauche du texte */
 }
 
-/* Section Notre Solution */
+@media screen and (max-width: 768px) {
+    .performance-banner .container {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        flex-wrap: wrap;
+      }
+      
+      .performance-banner-content {
+        display: grid; /* Use CSS Grid for layout */
+        grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+        grid-template-rows: auto; /* Allow rows to auto-size based on content */
+        gap: 2em; /* Space between grid items */
+      }
+
+    .metric {
+        width: 150px; /* Full width for metrics on smaller screens */
+        margin-bottom: 0; /* Add space between stacked items */
+    }
+
+    .metric .year,
+    .metric .value {
+        font-size: 1.1em; /* Adjust font size for better readability */
+        margin-left: 0; /* Remove left margin to center text */
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .metric .year,
+    .metric .value {
+        font-size: 0.8em; /* Adjust font size for better readability */
+        margin-left: 0; /* Remove left margin to center text */
+    }
+}
+
+
 /* Section Notre Solution */
 #notre-solution {
     background-color: var(--light-color); /* Couleur de fond */
@@ -402,6 +569,27 @@ header nav ul li a:hover {
     gap: 100px; /* Réduction de l'espace entre les cartes */
 }
 
+@media screen and (max-width: 768px) {
+    #notre-solution .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #notre-solution .card {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    #notre-solution .paired-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
 
 /* Section Maitrisez les bases */
 .training {
@@ -458,6 +646,7 @@ header nav ul li a:hover {
     margin-bottom: 0.5em; /* Espace en dessous du titre */
     color: var(--primary-color); /* Couleur primaire */
     font-family: var(--font-body); /* Utilise la police pour les corps de texte */
+    font-weight: normal;
 }
 
 .training .column p {
@@ -466,6 +655,25 @@ header nav ul li a:hover {
     font-family: var(--font-body); /* Utilise la police pour les corps de texte */
     line-height: 1.4; /* Hauteur de ligne */
     margin: 0; /* Supprime les marges */
+}
+
+.training .column:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre sur le survol */
+    transform: translateY(-15px) !important; /* Déplacement vers le haut */
+    border: 2px solid; /* Affiche la bordure */
+    border-image-slice: 1; /* Définit la bordure en image */
+    border-image-source: linear-gradient(135deg, var(--secondary-color), var(--accent-color)); /* Dégradé du cyan au violet */
+}
+
+@media screen and (max-width: 768px) {
+    .training .columns{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .training .column{
+        width: 80%;
+    }
 }
 
 /* Section Notre Stratégie */
@@ -493,7 +701,7 @@ header nav ul li a:hover {
 #notre-strategie .strategy-content {
     display: flex; /* Utilise Flexbox pour l'alignement */
     justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centre verticalement les éléments */
+    align-items: stretch; /* Étire les éléments pour qu'ils aient la même hauteur */
     flex-wrap: wrap; /* Permet le retour à la ligne des éléments */
 }
 
@@ -514,17 +722,20 @@ header nav ul li a:hover {
     flex: 1; /* Prend tout l'espace disponible */
     text-align: left; /* Texte aligné à gauche */
     padding: 20px; /* Padding interne */
+    display: flex; /* Utilise Flexbox pour les enfants */
+    flex-direction: column; /* Aligne les enfants en colonne */
+    justify-content: space-between; /* Espacement égal entre les enfants */
 }
 
 #notre-strategie .feature-box {
     display: flex; /* Utilise Flexbox pour l'alignement */
-    align-items: flex-start; /* Aligne les éléments au début en vertical */
-    margin-bottom: 20px; /* Espace entre chaque fonctionnalité */
+    align-items: stretch; /* Aligne les éléments au début en vertical */
+    /* margin-bottom: 20px; Espace entre chaque fonctionnalité */
+    flex: 1; /* Prend tout l'espace disponible */
 }
 
 #notre-strategie .feature-box i {
-    font-size: 40px; /* Taille des icônes */
-    margin-right: 10px; /* Espace à droite de l'icône */
+    font-size: 1.5em; /* Taille des icônes */
     color: var(--secondary-color); /* Utilisation de la couleur cyan */
 }
 
@@ -539,6 +750,15 @@ header nav ul li a:hover {
     color: var(--text-color); /* Couleur du texte */
     margin: 0; /* Supprime les marges */
     line-height: 1.4; /* Hauteur de ligne */
+}
+
+
+@media screen and (max-width: 768px) {
+    #notre-strategie .strategy-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -626,7 +846,6 @@ header nav ul li a:hover {
     color: white; /* Couleur du texte des icônes */
     font-size: 24px; /* Taille de la police des icônes */
     font-weight: bold; /* Poids de la police des icônes */
-    border: 3px solid var(--accent-color); /* Bordure bleu clair */
 }
 
 #debuter-facilement .icon-number {
@@ -652,26 +871,90 @@ header nav ul li a:hover {
 @media screen and (max-width: 768px) {
     #debuter-facilement .timeline-horizontal {
         flex-direction: column; /* Direction en colonne */
+        justify-content: center;
+        align-items: center;
     }
     #debuter-facilement .timeline-item {
-        width: 100%; /* Largeur complète */
+        width: 80%; /* Largeur complète */
         margin-bottom: 20px; /* Espace en dessous des éléments */
     }
     #debuter-facilement .timeline-horizontal::before {
-        top: auto;
+        top: 0;
         bottom: 0;
         left: 50%;
-        height: 100%;
+        height: 90%;
         width: 4px; /* Épaisseur de la ligne de la timeline pour petits écrans */
         transform: translateX(-50%);
     }
     #debuter-facilement .timeline-icon {
         top: auto;
-        bottom: -30px;
+        top: -50px;
         left: 50%;
         transform: translate(-50%, 50%);
     }
 }
+
+ /* support-analyse */
+ @media screen and (max-width: 768px) {
+    #support-analyse .support-analyse-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* alignement icones ssecurite totale, support analyse */
+
+.feature-icon {
+    min-width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+ }
+ .strategy-content .feature-icon .fa-chart-line {
+    margin-bottom: 20px;
+ }
+
+ .support-analyse-text .feature-icon .fa-headset {
+    margin-top: 20px;
+ }
+
+ .feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ @media screen and (max-width: 768px) {
+    #securite-totale .securite-totale-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .presentation .feature-box {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .feature-icon {
+        min-width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-bottom: 0;
+     }
+     .strategy-content .feature-icon .fa-chart-line {
+        margin-bottom: 0;
+     }
+    
+     .support-analyse-text .feature-icon .fa-headset {
+        margin-top: 0;
+     }
+}
+
 
 
 
@@ -700,7 +983,7 @@ header nav ul li a:hover {
 .presentation .support-analyse-content, .presentation .securite-totale-content {
     display: flex; /* Utilise Flexbox pour l'alignement */
     justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centre verticalement les éléments */
+    align-items: stretch; /* Étire les éléments pour qu'ils aient la même hauteur */
     flex-wrap: wrap; /* Permet le retour à la ligne des éléments */
 }
 
@@ -721,17 +1004,24 @@ header nav ul li a:hover {
     flex: 1; /* Prend tout l'espace disponible */
     text-align: left; /* Texte aligné à gauche */
     padding: 20px; /* Padding interne */
+    display: flex; /* Utilise Flexbox pour les enfants */
+    flex-direction: column; /* Aligne les enfants en colonne */
+    justify-content: space-between; /* Espacement égal entre les enfants */
 }
 
 .presentation .feature-box {
     display: flex; /* Utilise Flexbox pour l'alignement */
-    align-items: flex-start; /* Aligne les éléments au début en vertical */
-    margin-bottom: 20px; /* Espace entre chaque fonctionnalité */
+    align-items: stretch; /* Aligne les éléments au début en vertical */
+    /* margin-bottom: 20px; Espace entre chaque fonctionnalité */
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+#assistance-rapide {
+    margin-top: -10px;
 }
 
 .presentation .feature-box i {
-    font-size: 40px; /* Taille des icônes */
-    margin-right: 10px; /* Espace à droite de l'icône */
+    font-size: 1.5em; /* Taille des icônes */
     color: var(--secondary-color); /* Utilisation de la couleur cyan */
 }
 
@@ -747,6 +1037,7 @@ header nav ul li a:hover {
     margin: 0; /* Supprime les marges */
     line-height: 1.4; /* Hauteur de ligne */
 }
+
 
 
 /* Section Nos Résultats */
@@ -960,7 +1251,7 @@ header nav ul li a:hover {
     background-color: #FFFFFF; /* Couleur de fond des témoignages */
     padding: 2em; /* Padding interne */
     margin: 1em; /* Marges des témoignages */
-    width: 30%; /* Largeur des témoignages */
+    width: 25%; /* Largeur des témoignages */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre des témoignages */
     border-radius: 10px; /* Bords arrondis */
     text-align: center; /* Centre le texte */
@@ -1005,6 +1296,23 @@ header nav ul li a:hover {
     color: var(--dark-color); /* Couleur de texte */
     margin-bottom: 1em; /* Espace en dessous du paragraphe */
 }
+
+@media screen and (max-width: 768px) {
+    #testimonials .testimonial-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    #testimonials .testimonial {
+        width: 80%;
+     }
+
+     .testimonial {
+        margin: 0;
+     }
+}
+
 
 /* Section des tarifs */
 #pricing {
@@ -1095,6 +1403,17 @@ header nav ul li a:hover {
 .pricing-option .cta-button:hover {
     background-color: var(--accent-color); /* Couleur de fond au survol */
     transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+@media screen and (max-width: 768px) {
+    #pricing .pricing-table{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #pricing .pricing-option {
+        width: 80%;
+     }
 }
 /* Styles pour la section FAQ Tarifs */
 .faq {
@@ -1191,7 +1510,7 @@ header nav ul li a:hover {
 .contact-form input,
 .contact-form textarea {
     width: 100%; /* Prend toute la largeur disponible */
-    padding: 10px; /* Padding interne */
+    padding: 10px 0; /* Padding interne */
     border: 1px solid var(--text-color); /* Bordure */
     border-radius: 5px; /* Bords arrondis */
     font-size: 1em; /* Taille de police */
@@ -1202,7 +1521,6 @@ header nav ul li a:hover {
     color: white; /* Couleur de texte */
     padding: 10px 20px; /* Padding interne */
     border-radius: 5px; /* Bords arrondis */
-    border: none; /* Pas de bordure */
     font-size: 1em; /* Taille de police */
     cursor: pointer; /* Curseur de pointeur */
     transition: background-color 0.3s, transform 0.3s; /* Transitions pour les animations */
@@ -1211,6 +1529,13 @@ header nav ul li a:hover {
 .contact-form button:hover {
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%); /* Dégradé de fond au survol */
     transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+@media screen and (max-width: 768px) {
+
+.contact-form input,.contact-form textarea {
+    width: auto;
+}
 }
 
 
@@ -1330,4 +1655,153 @@ footer .footer-text p {
 .timeline-item.appear {
     opacity: 1; /* Rendre visible */
     transform: translateY(0); /* Position finale */
+}
+
+/* newletter */
+#sib-container input:-ms-input-placeholder {
+    text-align: left;
+    color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    color: #c0ccda;
+  }
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    color: #c0ccda;
+  }
+
+  #sib-container a {
+    text-decoration: underline;
+    color: #2BB2FC;
+  }
+
+  /* very small device */
+  .chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Largeur maximale pour les écrans plus grands */
+    height: 400px; /* Hauteur du graphique */
+    margin: auto; /* Centre le graphique */
+}
+
+#performanceComparisonChart, #annualPerformanceChart {
+    position: relative;
+    width: 100%; /* Adjust the width to fit the parent container */
+    height: 500px; /* Set the desired height here */
+    max-width: 1000px; /* Optional: maximum width */
+    max-height: 500px; /* Optional: maximum width */
+    margin: auto; /* Center the chart container */
+}
+
+/* a propos */
+
+#a-propos p {
+    text-align: left;
+}
+
+#a-propos h1,#a-propos h2,#a-propos h3,#a-propos h4,#a-propos h5{
+    text-align: left;
+}
+/* cgv */
+
+#cgv p {
+    text-align: left;
+}
+
+#cgv h1,#cgv h2,#cgv h3,#cgv h4,#cgv h5{
+    text-align: left;
+}
+/* politique-de-confidentialite */
+
+#politique-de-confidentialite p {
+    text-align: left;
+}
+
+#politique-de-confidentialite h1,#politique-de-confidentialite h2,#politique-de-confidentialite h3,#politique-de-confidentialite h4,#politique-de-confidentialite h5{
+    text-align: left;
+}
+/* mentions-legales */
+
+#mentions-legales p {
+    text-align: left;
+}
+
+#mentions-legales h1,#mentions-legales h2,#mentions-legales h3,#mentions-legales h4,#mentions-legales h5{
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    #performanceComparisonChart, #annualPerformanceChart {
+        height: 300px; /* Réduit la hauteur sur les petits écrans */
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #performanceComparisonChart, #annualPerformanceChart {
+        height: 250px; /* Réduit encore plus la hauteur sur les très petits écrans */
+        width: 250px;
+    }
+}
+
+  @media screen and (max-width: 380px) {
+    .metric .year,
+    .metric .value {
+        font-size: 0.8em; /* Adjust font size for better readability */
+        margin-left: 0; /* Remove left margin to center text */
+    }
+    .metric {
+        width: 100px;
+        margin-left: 0;
+    }
+    h1 {
+        font-size: 1.6em !important
+    }
+
+    h2{
+        font-size: 1.4em !important
+    }
+    h3 {
+        font-size: 1.3em !important
+    }
+    h4 {
+        font-size: 1.2em !important
+    }
+    h5 {
+        font-size: 1.1em !important
+    }
+    p {
+        font-size: 1em !important
+    }
+    
+    .form__entry .form__label-row div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .logo {
+        height: 50px;
+    }
+
+    .sticky-header .container a {
+        display: flex;
+    }
+
+    .menu-toggle {
+        font-size: 1.2em;
+    }
+
+    .nav-list {
+        top: 35px;
+    }
+    .feature-icon {
+        min-width: 20%;
+    }
+    .performance-banner-content {
+        gap: 0.5em;
+    }
 }

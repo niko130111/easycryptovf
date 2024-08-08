@@ -26,7 +26,7 @@ $(document).ready(function() {
         if (target.length) {
             event.preventDefault();
             $('html, body').animate({
-                scrollTop: target.offset().top
+                scrollTop: (target.offset().top - 140)
             }, 1000);
         }
     });
@@ -97,7 +97,7 @@ $(document).ready(function() {
     // Options pour les graphiques
     const chartOptions = {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
@@ -180,3 +180,53 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// header
+document.getElementById("mobile-menu").addEventListener("click", function() {
+    const navList = document.querySelector(".nav-list");
+    navList.classList.toggle("active");
+});
+
+// email form
+document.addEventListener("DOMContentLoaded", function() {
+    emailjs.init("qijdtWIKO3STeROHO"); // Initialize with your API key
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Replace with your own Service ID and Template ID
+      const serviceID = 'service_m5l4kbl';
+      const templateID = 'template_25jx2qq';
+
+      emailjs.sendForm(serviceID, templateID, this)
+  .then(() => {
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      text: 'Email sent successfully!',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK'
+    });
+  }, (err) => {
+    console.error('Failed to send email:', err);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Failed to send email. Please try again later.',
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'Retry'
+    });
+  });
+    });
+  });
+// cookies
+document.getElementById('accept-cookies').onclick = function() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    // Enregistrer le consentement des cookies, par exemple, dans le stockage local
+    localStorage.setItem('cookiesAccepted', 'true');
+  };
+
+  // Vérifier si le consentement a déjà été donné
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
